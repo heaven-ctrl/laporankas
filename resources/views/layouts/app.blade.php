@@ -21,9 +21,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand fw-bold" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -33,7 +33,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <!-- Menu Kategori Kas Ditambahkan di Sini -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('kategori.*') ? 'active font-weight-bold text-primary' : '' }}" href="{{ route('kategori.index') }}">
+                                Kategori Kas
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
